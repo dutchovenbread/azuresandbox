@@ -441,3 +441,14 @@ Output
 Now I'll try to connect via Azure Bastion.
 Bastion is a service which requires its own deployment. It isn't built into the console.
 I was able to create a Bastion and connect to the VM. I reached the desktop, but the target didn't play well with my browser.
+
+## Deletion
+
+List the deployments
+```
+az deployment group list --resource-group SmallArmTemplate -o table
+```
+Delete the deployments
+```
+az deployment group delete --resource-group SmallArmTemplate --name azuredeploy
+```
